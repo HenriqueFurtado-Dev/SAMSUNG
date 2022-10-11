@@ -1,0 +1,195 @@
+// Imports
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+// HEADER - START
+header {
+    padding: 30px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            .logo-img {
+                width: 200px;
+            }
+        }
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                li {
+                    &:last-child {
+                        background-color: $samsung-color;
+                        color: white;
+                        padding: 8px 20px;
+                        border-radius: 25px;
+                    }
+                    .button-menu {
+                        color: white;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// HEADER - END
+
+// BANNER - START
+.banner {
+    background-image: url("/assets/img/background-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: padding-box;
+    padding: 60px 0;
+    .container {
+        .banner-content {
+            display: flex;
+            div {
+                width: 50%;
+            }
+            .banner-content-text {
+                display: flex;
+                flex-direction: column;
+                
+                gap: 30px;
+                color: white;
+                h1 {
+                    font-size: 70px
+                }
+                p {
+                    font-size: 22px
+                }
+                button {
+                    width: 200px;
+                    font-size: 16px;
+                }
+            }
+            .banner-content-img {
+                @include flexCenter();
+                img {
+                    width: 550px;
+                    z-index: 1;
+                }
+            }
+        }
+        .banner-boxes {
+            display: flex;
+            margin-top: -50px;
+            gap: 50px;
+            .div-boxes-box {
+                padding: 40px 30px;
+                z-index: 99;
+                background-color: white;
+                box-shadow: 0 0 20px grey;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2 {
+                    font-size: 36px;
+                }
+                
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+                i {
+                    font-size: 40px;
+                }
+            }
+            .div-boxes-box:nth-child(1) {
+                .title {
+                    color: $primary-color;
+                }
+            }
+
+            .div-boxes-box:nth-child(2) {
+                .title {
+                    color: $secondary-color;
+                }
+            }
+
+            .div-boxes-box:nth-child(3) {
+                .title {
+                    color: $thirt-color;
+                }
+            }
+        }
+    }
+}
+// BANNER - END
+// PRODUCTS - START
+.products {
+    padding: 120px 0;
+    .container {
+        display: flex;
+        .products-box {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 250px;
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+            h3 {
+                font-size: 24px;
+            }
+            i {
+                font-size: 30px;
+                margin-top: 10px; 
+                color: $samsung-color;
+            }
+        }
+    }
+}
+// PRODUCTS - END
+// CTA - START
+.cta {
+    background-color: $bg-purple;
+    .container {
+        @include section();
+        display: flex;
+        div {
+            width: 50%;
+        }
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            gap: 40px;
+            h2 {
+                font-size: 54px;
+            }
+            p {
+                font-size: 20px;
+                font-weight: 400;
+            }
+            button {
+                width: 200px;
+            }
+        }
+        .cta-img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+// CTA - END
